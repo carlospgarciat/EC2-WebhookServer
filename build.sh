@@ -2,12 +2,12 @@
 
 LOGFILE=build.log
 (
-		# Information from posted JSON(Repo, Pusher, and SSH URL)
+		# Information from posted JSON(Repo, Pusher, and URL)
         echo -e "`date` : Build in progress...\n"
         echo "----------------------------------"
         echo "Application: $1"
         echo "Build Trigger: $2"
-        echo "SSH URL: $3"
+        echo "URL: $3"
         echo "----------------------------------"
 
 		# Mitigative tasks to avoid duplicate errors:
@@ -20,6 +20,7 @@ LOGFILE=build.log
 		
 		# Clones Github Repo using SSH URL
         echo -e "\n`date` : Cloning repo...."
+	cd /home/ec2-user
         git clone $3
 
 		# Performs docker build command using repo's Dockerfile
