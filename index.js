@@ -5,7 +5,7 @@ const shell = require("shelljs")
 
 // Initialize express and define a port
 const app = express()
-const PORT = 3000
+const PORT = 3035
 
 // Tell express to use body-parser's JSON parsing
 app.use(bodyParser.json())
